@@ -1,0 +1,10 @@
+subsonic:
+  #build: .
+  image: druminik/odroid-subsonic
+  restart: always
+  net: "bridge"
+  ports:
+  - "4040:4040"
+  volumes:
+  - "/media/music:/var/music:ro"
+  container_name: subsonic
